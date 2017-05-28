@@ -433,18 +433,20 @@ RCT_EXPORT_METHOD(getStatus: (RCTResponseSenderBlock) callback)
 
 - (void)setNowPlayingInfo:(bool)isPlaying
 {
-   if (self.showNowPlayingInfo) {
-      // TODO Get artwork from stream
-      // MPMediaItemArtwork *artwork = [[MPMediaItemArtwork alloc]initWithImage:[UIImage imageNamed:@"webradio1"]];
+//    if (self.showNowPlayingInfo) {
+//       // TODO Get artwork from stream
+//       // MPMediaItemArtwork *artwork = [[MPMediaItemArtwork alloc]initWithImage:[UIImage imageNamed:@"webradio1"]];
    
-      NSString* appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
-      NSDictionary *nowPlayingInfo = [NSDictionary dictionaryWithObjectsAndKeys:
-                                      self.currentSong ? self.currentSong : @"", MPMediaItemPropertyAlbumTitle,
-                                      @"", MPMediaItemPropertyAlbumArtist,
-                                      appName ? appName : @"AppName", MPMediaItemPropertyTitle,
-                                      [NSNumber numberWithFloat:isPlaying ? 1.0f : 0.0], MPNowPlayingInfoPropertyPlaybackRate, nil];
-      [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = nowPlayingInfo;
-   }
+//       NSString* appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
+//       NSDictionary *nowPlayingInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+//                                       self.currentSong ? self.currentSong : @"", MPMediaItemPropertyAlbumTitle,
+//                                       @"", MPMediaItemPropertyAlbumArtist,
+//                                       appName ? appName : @"AppName", MPMediaItemPropertyTitle,
+//                                       [NSNumber numberWithFloat:isPlaying ? 1.0f : 0.0], MPNowPlayingInfoPropertyPlaybackRate, nil];
+//       [
+         
+//          defaultCenter].nowPlayingInfo = nowPlayingInfo;
+//    }
 }
 
 @end
